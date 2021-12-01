@@ -1,0 +1,24 @@
+unit ConsultaUnidade;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, fConsultaDefault, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmConsultaUnidade = class(TfrmConsultaDefault)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsultaUnidade: TfrmConsultaUnidade;
+
+implementation
+
+{$R *.dfm}
+
+end.

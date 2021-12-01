@@ -1,0 +1,34 @@
+unit fCadastroVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, fCadastroDefault, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls;
+
+type
+  TfrmCadastroVenda = class(TfmrCadastroDefault)
+    Edit1: TEdit;
+    edtTotal: TEdit;
+    memoObs: TMemo;
+    edtFormaPagamento: TEdit;
+    edtVendedor: TEdit;
+    edtCliente: TEdit;
+    dtpEmissao: TDateTimePicker;
+    edtId: TEdit;
+    lblId: TLabel;
+    lblEmissao: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroVenda: TfrmCadastroVenda;
+
+implementation
+
+{$R *.dfm}
+
+end.

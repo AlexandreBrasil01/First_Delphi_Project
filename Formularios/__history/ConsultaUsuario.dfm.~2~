@@ -1,0 +1,63 @@
+inherited frmConsultaDefault1: TfrmConsultaDefault1
+  Caption = 'Consulta de Usu'#225'rios'
+  PixelsPerInch = 115
+  TextHeight = 16
+  inherited pnlPesquisa: TPanel
+    Font.Height = -16
+    Font.Name = 'Arial'
+    ParentFont = False
+    ExplicitLeft = 1
+    ExplicitTop = 47
+    inherited cbxFiltro: TComboBox
+      Height = 26
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Text = 'Nome'
+      Items.Strings = (
+        'Nome'
+        'Login'
+        'Email')
+      ExplicitHeight = 26
+    end
+    inherited edtPesquisar: TEdit
+      Left = 165
+      Height = 26
+      Font.Name = 'Arial'
+      ExplicitLeft = 165
+      ExplicitHeight = 26
+    end
+    object cbxFiltro2: TComboBox
+      Left = 375
+      Top = 6
+      Width = 144
+      Height = 26
+      Style = csDropDownList
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ItemIndex = 0
+      ParentFont = False
+      TabOrder = 2
+      Text = 'ID'
+      Items.Strings = (
+        'ID'
+        'N'#237'vel de Acesso')
+    end
+    object Edit1: TEdit
+      Left = 525
+      Top = 6
+      Width = 145
+      Height = 26
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      NumbersOnly = True
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+end

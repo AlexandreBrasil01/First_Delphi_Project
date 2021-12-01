@@ -1,0 +1,53 @@
+unit uScript;
+
+interface
+
+uses
+  FireDAC.Comp.Client, dconexao, Vcl.Dialogs, System.SysUtils, Vcl.Controls,
+  Vcl.Forms;
+
+type
+  TScript = class
+  private
+    class var FObjetoBusca: TScript;
+    function VerificaSeATabelaEstaCriadaNoBanco(pTabela: string): Boolean;
+    function VerificaSeOCampoEstaCriadoNoBanco(pCampo: array of string;
+      pTabela: string): Boolean;
+    function VerificaSeExisteOGenerator(pNomeGenerator: string): Boolean;
+    function VerificaSeExisteATrigger(pNomeTrigger: string): Boolean;
+    function VerificaSeExisteProcedure(pNomeProcedure: string): Boolean;
+    function VerificaSeExisteFunction(pNomeFunction: string): Boolean;
+    function VerificaSeExisteAConstraint(pNome: string): Boolean;
+    function VerificaSeExisteOIndice(pNome: string): Boolean;
+  public
+    destructor Destroy; override;
+    procedure Inicializar;
+    constructor Create;
+    class property ObjetoBusca: TClasDefault read FObjetoBusca
+      write FObjetoBusca;
+
+    property ID: integer read FID write FID;
+
+  end;
+
+implementation
+
+{ TClassDefault }
+
+procedure TClasDefault.Inicializar;
+begin
+  //
+end;
+
+constructor TClasDefault.Create;
+begin
+  //
+end;
+
+destructor TClasDefault.Destroy;
+begin
+  //
+  inherited;
+end;
+
+end.

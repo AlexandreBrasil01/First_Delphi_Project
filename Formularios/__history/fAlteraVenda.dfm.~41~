@@ -1,0 +1,497 @@
+object frmAlteraVenda: TfrmAlteraVenda
+  Left = 0
+  Top = 0
+  Caption = 'frmAlteraVenda'
+  ClientHeight = 622
+  ClientWidth = 855
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 115
+  TextHeight = 18
+  object pnlCabecalho: TPanel
+    Left = 0
+    Top = 40
+    Width = 855
+    Height = 161
+    Align = alTop
+    TabOrder = 0
+    object lblVendedor: TLabel
+      Left = 28
+      Top = 88
+      Width = 72
+      Height = 18
+      Caption = 'Vendedor:'
+    end
+    object lblNomeVendedor: TLabel
+      Left = 138
+      Top = 120
+      Width = 135
+      Height = 18
+      Caption = '_______________'
+    end
+    object lblCliente: TLabel
+      Left = 118
+      Top = 10
+      Width = 53
+      Height = 18
+      Caption = 'Cliente:'
+    end
+    object lblNVenda: TLabel
+      Left = 9
+      Top = 8
+      Width = 92
+      Height = 18
+      Caption = 'N'#176' da Venda:'
+    end
+    object lblNomeCliente: TLabel
+      Left = 233
+      Top = 40
+      Width = 135
+      Height = 18
+      Caption = '_______________'
+    end
+    object lblNomeFPagamento: TLabel
+      Left = 644
+      Top = 40
+      Width = 135
+      Height = 18
+      Caption = '_______________'
+    end
+    object lblFPagamento: TLabel
+      Left = 483
+      Top = 8
+      Width = 157
+      Height = 18
+      Caption = 'Forma de Pagamento:'
+    end
+    object lblVencimento: TLabel
+      Left = 483
+      Top = 88
+      Width = 82
+      Height = 18
+      Caption = 'Vencimento'
+    end
+    object edtIdVendedor: TEdit
+      Left = 28
+      Top = 112
+      Width = 60
+      Height = 26
+      NumbersOnly = True
+      TabOrder = 2
+      OnExit = edtIdVendedorExit
+    end
+    object edtIdCliente: TEdit
+      Left = 118
+      Top = 32
+      Width = 60
+      Height = 26
+      NumbersOnly = True
+      TabOrder = 1
+      OnExit = edtIdClienteExit
+    end
+    object edtIdVenda: TEdit
+      Left = 28
+      Top = 32
+      Width = 60
+      Height = 26
+      TabStop = False
+      Color = clGradientActiveCaption
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object edtIdFPagamento: TEdit
+      Left = 483
+      Top = 32
+      Width = 60
+      Height = 26
+      NumbersOnly = True
+      TabOrder = 3
+      OnExit = edtIdFPagamentoExit
+    end
+    object dtpvencimento: TDateTimePicker
+      Left = 483
+      Top = 112
+      Width = 111
+      Height = 26
+      Date = 44523.000000000000000000
+      Time = 0.394303437497001100
+      Enabled = False
+      TabOrder = 4
+    end
+    object btnIncluir: TButton
+      Left = 648
+      Top = 112
+      Width = 80
+      Height = 30
+      Caption = 'Incluir'
+      TabOrder = 5
+      OnClick = btnIncluirClick
+    end
+    object btnExcluir: TButton
+      Left = 750
+      Top = 112
+      Width = 80
+      Height = 30
+      Caption = 'Excluir'
+      TabOrder = 6
+      OnClick = btnExcluirClick
+    end
+    object btnBuscaNomeCliente: TButton
+      Left = 184
+      Top = 32
+      Width = 38
+      Height = 26
+      TabOrder = 7
+      OnClick = btnBuscaNomeClienteClick
+    end
+    object btnBuscaNomeVendedor: TButton
+      Left = 94
+      Top = 112
+      Width = 38
+      Height = 26
+      TabOrder = 8
+      OnClick = btnBuscaNomeVendedorClick
+    end
+    object btnBuscaFPagamento: TButton
+      Left = 594
+      Top = 32
+      Width = 38
+      Height = 26
+      TabOrder = 9
+      OnClick = btnBuscaFPagamentoClick
+    end
+    object edtTipo: TEdit
+      Left = 548
+      Top = 32
+      Width = 40
+      Height = 26
+      TabStop = False
+      ReadOnly = True
+      TabOrder = 10
+      OnChange = edtTipoChange
+    end
+  end
+  object pnlTitulo: TPanel
+    Left = 0
+    Top = 0
+    Width = 855
+    Height = 40
+    Align = alTop
+    Caption = 'Altera'#231#227'o de Vendas'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+  end
+  object pnlGrid: TPanel
+    Left = 0
+    Top = 201
+    Width = 855
+    Height = 252
+    Align = alClient
+    Caption = 'pnlGrid'
+    TabOrder = 2
+    object gridItens: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 853
+      Height = 250
+      Align = alClient
+      Color = clWhite
+      DataSource = dtmConexao.dtsItens
+      DefaultDrawing = False
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -16
+      TitleFont.Name = 'Arial'
+      TitleFont.Style = []
+      OnDrawColumnCell = gridItensDrawColumnCell
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'FK_PRODUTO'
+          Title.Caption = 'Produto'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Title.Caption = 'Descri'#231#227'o'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'QUANTIDADE'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'Quantidade'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALOR'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'Valor'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCONTO'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'Desconto'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TOTAL'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'Total'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'EMISSAO'
+          Title.Caption = 'Emiss'#227'o'
+          Visible = True
+        end>
+    end
+  end
+  object pnlProdutoFinal: TPanel
+    Left = 0
+    Top = 453
+    Width = 855
+    Height = 129
+    Align = alBottom
+    TabOrder = 3
+    object lblObs: TLabel
+      Left = 304
+      Top = 6
+      Width = 97
+      Height = 18
+      Caption = 'Observa'#231#245'es:'
+    end
+    object lblValorAcresDesc: TLabel
+      Left = 164
+      Top = 74
+      Width = 36
+      Height = 18
+      Caption = 'Valor'
+    end
+    object lblPercentual: TLabel
+      Left = 164
+      Top = 6
+      Width = 74
+      Height = 18
+      Caption = 'Percentual'
+    end
+    object pnlValorFinal: TPanel
+      Left = 559
+      Top = 6
+      Width = 230
+      Height = 117
+      Color = clTeal
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 3
+      object lblDivisoria: TLabel
+        Left = -23
+        Top = 38
+        Width = 273
+        Height = 67
+        AutoSize = False
+        Caption = '_____________________'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblTotalF: TLabel
+        Left = 8
+        Top = 76
+        Width = 50
+        Height = 27
+        Caption = 'Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblSubtotal: TLabel
+        Left = 7
+        Top = 5
+        Width = 101
+        Height = 27
+        Caption = 'Sub Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblDescontoF: TLabel
+        Left = 7
+        Top = 29
+        Width = 121
+        Height = 27
+        Caption = 'Acres/Desc'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblAcrsDescNum: TLabel
+        Left = 168
+        Top = 29
+        Width = 46
+        Height = 27
+        Alignment = taRightJustify
+        Caption = '0,00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblSubTotalNum: TLabel
+        Left = 168
+        Top = 5
+        Width = 46
+        Height = 27
+        Alignment = taRightJustify
+        Caption = '0,00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblTotalNum: TLabel
+        Left = 168
+        Top = 76
+        Width = 46
+        Height = 27
+        Alignment = taRightJustify
+        Caption = '0,00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object edtPorcentual: TEdit
+      Left = 166
+      Top = 30
+      Width = 121
+      Height = 26
+      TabStop = False
+      CharCase = ecUpperCase
+      Enabled = False
+      TabOrder = 1
+      OnExit = edtPorcentualExit
+    end
+    object memoObs: TMemo
+      Left = 304
+      Top = 30
+      Width = 236
+      Height = 93
+      CharCase = ecUpperCase
+      TabOrder = 2
+    end
+    object rdgAcrsDesc: TRadioGroup
+      Left = 9
+      Top = 6
+      Width = 140
+      Height = 117
+      Caption = 'Acre/Desc:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ItemIndex = 0
+      Items.Strings = (
+        'Sem Altera'#231#227'o'
+        'Acr'#233'scimo'
+        'Desconto')
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+      OnClick = rdgAcrsDescClick
+    end
+    object edtValorAcrsDesc: TEdit
+      Left = 164
+      Top = 97
+      Width = 121
+      Height = 26
+      TabStop = False
+      CharCase = ecUpperCase
+      Enabled = False
+      TabOrder = 4
+      OnExit = edtValorAcrsDescExit
+    end
+  end
+  object pnlBtnFinal: TPanel
+    Left = 0
+    Top = 582
+    Width = 855
+    Height = 40
+    Align = alBottom
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 4
+    object btnConfirmar: TButton
+      Left = 1
+      Top = 1
+      Width = 90
+      Height = 38
+      Align = alLeft
+      Caption = 'Confirmar'
+      TabOrder = 0
+      OnClick = btnConfirmarClick
+    end
+    object btnCancelar: TButton
+      Left = 91
+      Top = 1
+      Width = 90
+      Height = 38
+      Align = alLeft
+      Caption = 'Cancelar'
+      TabOrder = 1
+      OnClick = btnCancelarClick
+    end
+  end
+end

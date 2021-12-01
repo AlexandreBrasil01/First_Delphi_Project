@@ -1,0 +1,5 @@
+inherited frmFiltroVenda: TfrmFiltroVenda
+  Caption = 'frmFiltroVenda'
+  PixelsPerInch = 115
+  TextHeight = 18
+end

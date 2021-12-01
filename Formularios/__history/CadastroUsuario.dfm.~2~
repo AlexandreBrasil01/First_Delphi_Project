@@ -1,0 +1,138 @@
+inherited fmrCadastroDefault1: TfmrCadastroDefault1
+  Caption = 'fmrCadastroDefault1'
+  PixelsPerInch = 115
+  TextHeight = 16
+  inherited Panel2: TPanel
+    Font.Height = -16
+    Font.Name = 'Arial'
+    ParentFont = False
+    ExplicitTop = 47
+    object lblID: TLabel
+      Left = 352
+      Top = 40
+      Width = 19
+      Height = 18
+      Caption = 'ID:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblNome: TLabel
+      Left = 88
+      Top = 40
+      Width = 46
+      Height = 18
+      Caption = 'Nome:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblLogIn: TLabel
+      Left = 88
+      Top = 112
+      Width = 43
+      Height = 18
+      Caption = 'Login:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblSenha: TLabel
+      Left = 88
+      Top = 184
+      Width = 49
+      Height = 18
+      Caption = 'Senha:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblEmail: TLabel
+      Left = 352
+      Top = 112
+      Width = 44
+      Height = 18
+      Caption = 'Email:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblNivelAceso: TLabel
+      Left = 352
+      Top = 184
+      Width = 115
+      Height = 18
+      Caption = 'N'#237'vel de Acesso:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object edtID: TEdit
+      Left = 352
+      Top = 64
+      Width = 121
+      Height = 26
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 80
+      Top = 64
+      Width = 121
+      Height = 26
+      TabOrder = 1
+    end
+    object Edit2: TEdit
+      Left = 80
+      Top = 136
+      Width = 121
+      Height = 26
+      TabOrder = 2
+    end
+    object Edit3: TEdit
+      Left = 80
+      Top = 208
+      Width = 121
+      Height = 26
+      TabOrder = 3
+    end
+    object Edit4: TEdit
+      Left = 352
+      Top = 136
+      Width = 121
+      Height = 26
+      TabOrder = 4
+    end
+    object Edit5: TEdit
+      Left = 352
+      Top = 208
+      Width = 121
+      Height = 26
+      TabOrder = 5
+    end
+  end
+end

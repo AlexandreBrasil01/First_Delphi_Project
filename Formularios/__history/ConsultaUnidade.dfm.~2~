@@ -1,0 +1,31 @@
+inherited frmConsultaUnidade: TfrmConsultaUnidade
+  Caption = 'Consulta de Unidades'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited pnlGrid: TPanel
+    inherited DBGrid1: TDBGrid
+      DataSource = dtmConexao.dtsUnidade
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'REFERENCIA'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UNIDADE'
+          Visible = True
+        end>
+    end
+  end
+end

@@ -1,0 +1,75 @@
+object fmrCadastroProduto: TfmrCadastroProduto
+  Left = 0
+  Top = 0
+  Align = alBottom
+  Caption = 'fmrCadastroProduto'
+  ClientHeight = 384
+  ClientWidth = 623
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 115
+  TextHeight = 16
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 623
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 41
+    Width = 623
+    Height = 302
+    Align = alClient
+    TabOrder = 1
+    object lblNome: TLabel
+      Left = 40
+      Top = 23
+      Width = 42
+      Height = 19
+      Caption = 'Nome'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object edtNome: TEdit
+      Left = 40
+      Top = 56
+      Width = 161
+      Height = 24
+      TabOrder = 0
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 343
+    Width = 623
+    Height = 41
+    Align = alBottom
+    TabOrder = 2
+    object btnSair: TButton
+      Left = 7
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Sair'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+end

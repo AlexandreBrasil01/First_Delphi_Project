@@ -1,0 +1,73 @@
+inherited frmConsultaUnidade: TfrmConsultaUnidade
+  Caption = 'Consulta de Unidades'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited pnlPesquisa: TPanel
+    inherited cbxFiltro: TComboBox
+      ItemIndex = 0
+      Text = 'Id'
+      OnChange = cbxFiltroChange
+      Items.Strings = (
+        'Id'
+        'Unidade')
+    end
+    inherited edtPesquisar: TEdit
+      Left = 185
+      CharCase = ecUpperCase
+      NumbersOnly = True
+      OnChange = edtPesquisarChange
+      ExplicitLeft = 185
+    end
+  end
+  inherited pnlBotoes: TPanel
+    inherited btnAtualizar: TButton
+      TabOrder = 4
+      OnClick = btnAtualizarClick
+    end
+    inherited btnIncluir: TButton
+      TabOrder = 0
+      OnClick = btnIncluirClick
+    end
+    inherited btnAlterar: TButton
+      TabOrder = 1
+    end
+    inherited btnSair: TButton
+      TabOrder = 6
+      OnClick = btnSairClick
+    end
+    inherited btnExcluir: TButton
+      TabOrder = 2
+      OnClick = btnExcluirClick
+    end
+    inherited btnVisualizar: TButton
+      TabOrder = 3
+    end
+  end
+  inherited pnlGrid: TPanel
+    inherited DBGrid1: TDBGrid
+      DataSource = dtmConexao.dtsUnidade
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Title.Caption = 'Id'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Title.Caption = 'Descri'#231#227'o'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UNIDADE'
+          Title.Caption = 'Unidade'
+          Width = 70
+          Visible = True
+        end>
+    end
+  end
+end

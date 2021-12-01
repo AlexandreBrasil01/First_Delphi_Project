@@ -1,0 +1,153 @@
+object frmAlteraVendaItem: TfrmAlteraVendaItem
+  Left = 0
+  Top = 0
+  Caption = 'frmAlteraVendaItem'
+  ClientHeight = 293
+  ClientWidth = 516
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 115
+  TextHeight = 18
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 516
+    Height = 40
+    Align = alTop
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 253
+    Width = 516
+    Height = 40
+    Align = alBottom
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object pnlItens: TPanel
+    Left = 0
+    Top = 40
+    Width = 516
+    Height = 213
+    Align = alClient
+    ParentBackground = False
+    TabOrder = 2
+    object lblProduto: TLabel
+      Left = 24
+      Top = 38
+      Width = 59
+      Height = 18
+      Caption = 'Produto:'
+    end
+    object lblNomeProduto: TLabel
+      Left = 150
+      Top = 72
+      Width = 135
+      Height = 18
+      Caption = '_______________'
+    end
+    object lblQuantidade: TLabel
+      Left = 24
+      Top = 120
+      Width = 85
+      Height = 18
+      Caption = 'Quantidade:'
+    end
+    object lblValor: TLabel
+      Left = 141
+      Top = 120
+      Width = 40
+      Height = 18
+      Caption = 'Valor:'
+    end
+    object lblTotal: TLabel
+      Left = 362
+      Top = 120
+      Width = 36
+      Height = 18
+      Caption = 'Total:'
+    end
+    object lblDesconto: TLabel
+      Left = 251
+      Top = 120
+      Width = 89
+      Height = 18
+      Caption = 'Desconto %:'
+    end
+    object edtValor: TEdit
+      Left = 141
+      Top = 144
+      Width = 97
+      Height = 26
+      CharCase = ecUpperCase
+      TabOrder = 3
+    end
+    object btnIdProduto: TButton
+      Left = 110
+      Top = 61
+      Width = 34
+      Height = 30
+      ImageIndex = 0
+      TabOrder = 1
+      TabStop = False
+    end
+    object edtIdProduto: TEdit
+      Left = 24
+      Top = 64
+      Width = 80
+      Height = 26
+      NumbersOnly = True
+      TabOrder = 0
+    end
+    object edtTotal: TEdit
+      Left = 362
+      Top = 144
+      Width = 97
+      Height = 26
+      TabStop = False
+      CharCase = ecUpperCase
+      ReadOnly = True
+      TabOrder = 5
+    end
+    object edtDesconto: TEdit
+      Left = 251
+      Top = 144
+      Width = 97
+      Height = 26
+      TabOrder = 4
+    end
+    object edtQuantidade: TEdit
+      Left = 24
+      Top = 144
+      Width = 104
+      Height = 26
+      CharCase = ecUpperCase
+      TabOrder = 2
+    end
+    object btnConfirmaProduto: TButton
+      Left = 306
+      Top = 61
+      Width = 80
+      Height = 30
+      Caption = 'Confirmar'
+      TabOrder = 6
+    end
+    object btnExcluiProduto: TButton
+      Left = 392
+      Top = 61
+      Width = 80
+      Height = 30
+      Caption = 'Excluir'
+      TabOrder = 7
+    end
+  end
+end

@@ -1,0 +1,70 @@
+unit fFiltroFPagamento;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, fFiltroDefault, Vcl.StdCtrls,
+  Vcl.ExtCtrls, fRelatorioFPagamento;
+
+type
+  TfrmFiltroFPagamento = class(TfrmFiltroDefault)
+    procedure btnVisualizarClick(Sender: TObject);
+  private
+    { Private declarations }
+    FRelatorio: TfrmRelatorioFPagamento;
+  public
+    { Public declarations }
+    procedure ImprimeRelatorio;
+  end;
+
+var
+  frmFiltroFPagamento: TfrmFiltroFPagamento;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmFiltroFPagamento.btnVisualizarClick(Sender: TObject);
+begin
+  //
+end;
+
+procedure ImprimeRelatorio;
+begin
+
+  procedure CarregaQryRelatorio;
+  begin
+    FRelatorio := TfrmRelatorioFPagamento.create(nil);
+    try
+      FRelatorio.DataSource1.DataSet := FRelatorio.qryRelatorio;
+      FRelatorio.rlpRelatorio.datasource := FRelatorio.DataSource1;
+
+      FRelatorio.qryRelatorio.close;
+      FRelatorio.qryRelatorio.SQL.clear;
+      FRelatorio.qryRelatorio.SQL.Add('SELECT * FROM FORMAPAGAMENTO');
+
+      FRelatorio.qryRelatorio.Open;
+
+      FRelatorio.rlpRelatorio.preview;
+    finally
+
+      FRelatorio.free;
+    end;
+
+  end;
+
+  begin
+    FRelatorio := TfrmRelatorioVenda.create(nil);
+    try
+      CarregarQueryVendaRelatorio;
+      CarregarQueryItemVendaRelatorio;
+      FRelatorio.rlpRelatorio.preview;
+    finally
+      FRelatorio.free;
+    end;
+  end;
+end;
+
+end.

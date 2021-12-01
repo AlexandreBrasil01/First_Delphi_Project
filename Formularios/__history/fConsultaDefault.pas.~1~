@@ -1,0 +1,39 @@
+unit fConsultaProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, dConexao;
+
+type
+  TForm1 = class(TForm)
+    pnlPesquisa: TPanel;
+    DBGrid1: TDBGrid;
+    pnlBotoes: TPanel;
+    btnAtualizar: TButton;
+    btnIncluir: TButton;
+    btnAlterar: TButton;
+    btnSair: TButton;
+    pnlGrid: TPanel;
+    pnlTitulo: TPanel;
+    btnExcluir: TButton;
+    btnRelat: TButton;
+    cbxFiltro: TComboBox;
+    edtPesquisar: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

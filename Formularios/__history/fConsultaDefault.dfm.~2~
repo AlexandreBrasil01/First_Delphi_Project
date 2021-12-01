@@ -1,0 +1,163 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 444
+  ClientWidth = 776
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 115
+  TextHeight = 16
+  object pnlPesquisa: TPanel
+    Left = 0
+    Top = 41
+    Width = 776
+    Height = 80
+    Align = alTop
+    TabOrder = 0
+    ExplicitWidth = 647
+    object cbxFiltro: TComboBox
+      Left = 14
+      Top = 6
+      Width = 145
+      Height = 27
+      Style = csDropDownList
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Items.Strings = (
+        '')
+    end
+    object edtPesquisar: TEdit
+      Left = 181
+      Top = 6
+      Width = 145
+      Height = 27
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 405
+    Width = 776
+    Height = 39
+    Align = alBottom
+    TabOrder = 1
+    ExplicitTop = 328
+    ExplicitWidth = 647
+    object btnAtualizar: TButton
+      Left = 1
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Atualizar'
+      TabOrder = 0
+      ExplicitHeight = 39
+    end
+    object btnIncluir: TButton
+      Left = 89
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Incluir'
+      TabOrder = 1
+      ExplicitHeight = 39
+    end
+    object btnAlterar: TButton
+      Left = 177
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Alterar'
+      TabOrder = 2
+      ExplicitHeight = 39
+    end
+    object btnSair: TButton
+      Left = 441
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Sair'
+      TabOrder = 3
+      ExplicitLeft = 265
+      ExplicitHeight = 39
+    end
+    object btnExcluir: TButton
+      Left = 265
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Excluir'
+      TabOrder = 4
+      ExplicitLeft = 271
+      ExplicitTop = 5
+    end
+    object btnRelat: TButton
+      Left = 353
+      Top = 1
+      Width = 88
+      Height = 37
+      Align = alLeft
+      Caption = 'Relat'#243'rio'
+      TabOrder = 5
+      ExplicitLeft = 409
+      ExplicitTop = 5
+    end
+  end
+  object pnlGrid: TPanel
+    Left = 0
+    Top = 121
+    Width = 776
+    Height = 284
+    Align = alClient
+    Caption = 'pnlGrid'
+    TabOrder = 2
+    ExplicitLeft = 1
+    ExplicitTop = 96
+    ExplicitWidth = 647
+    ExplicitHeight = 216
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 774
+      Height = 282
+      Align = alClient
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -13
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+  end
+  object pnlTitulo: TPanel
+    Left = 0
+    Top = 0
+    Width = 776
+    Height = 41
+    Align = alTop
+    TabOrder = 3
+    ExplicitLeft = 256
+    ExplicitWidth = 185
+  end
+end

@@ -1,0 +1,28 @@
+inherited fmrCadastroDefault1: TfmrCadastroDefault1
+  Caption = 'fmrCadastroDefault1'
+  PixelsPerInch = 115
+  TextHeight = 16
+  inherited Panel2: TPanel
+    object lblID: TLabel
+      Left = 48
+      Top = 32
+      Width = 19
+      Height = 18
+      Caption = 'ID:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 136
+      Top = 29
+      Width = 121
+      Height = 24
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
+end

@@ -1,0 +1,24 @@
+unit fCadastroVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, fCadastroDefault, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfmrCadastroDefault1 = class(TfmrCadastroDefault)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fmrCadastroDefault1: TfmrCadastroDefault1;
+
+implementation
+
+{$R *.dfm}
+
+end.

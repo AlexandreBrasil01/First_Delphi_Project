@@ -1,0 +1,23 @@
+inherited frmFiltroVenda: TfrmFiltroVenda
+  Caption = 'frmFiltroVenda'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited Panel1: TPanel
+    ExplicitWidth = 400
+  end
+  inherited Panel2: TPanel
+    ExplicitWidth = 400
+    ExplicitHeight = 206
+  end
+  inherited Panel3: TPanel
+    ExplicitTop = 246
+    ExplicitWidth = 400
+    inherited btnVisualizar: TButton
+      OnClick = btnVisualizarClick
+    end
+    inherited btnLimpar: TButton
+      ExplicitLeft = 299
+      ExplicitTop = 1
+    end
+  end
+end

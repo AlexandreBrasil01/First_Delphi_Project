@@ -1,0 +1,71 @@
+inherited frmConsultaFPagamento: TfrmConsultaFPagamento
+  Caption = 'Consulta Forma de Pagamentos'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited pnlPesquisa: TPanel
+    inherited cbxFiltro: TComboBox
+      ItemIndex = 0
+      Text = 'Id'
+      OnChange = cbxFiltroChange
+      Items.Strings = (
+        'Id'
+        'Descri'#231#227'o')
+    end
+    inherited edtPesquisar: TEdit
+      NumbersOnly = True
+      OnChange = edtPesquisarChange
+    end
+  end
+  inherited pnlBotoes: TPanel
+    inherited btnAtualizar: TButton
+      TabOrder = 4
+      OnClick = btnAtualizarClick
+    end
+    inherited btnIncluir: TButton
+      TabOrder = 0
+      OnClick = btnIncluirClick
+    end
+    inherited btnAlterar: TButton
+      TabOrder = 1
+      OnClick = btnAlterarClick
+    end
+    inherited btnSair: TButton
+      TabOrder = 6
+      OnClick = btnSairClick
+    end
+    inherited btnExcluir: TButton
+      TabOrder = 2
+      OnClick = btnExcluirClick
+      ExplicitLeft = 175
+      ExplicitTop = 5
+    end
+    inherited btnVisualizar: TButton
+      TabOrder = 3
+      OnClick = btnVisualizarClick
+    end
+  end
+  inherited pnlGrid: TPanel
+    inherited DBGrid1: TDBGrid
+      DataSource = dtmConexao.dtsFPagamento
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Width = 60
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Width = 120
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TIPO'
+          Width = 45
+          Visible = True
+        end>
+    end
+  end
+end

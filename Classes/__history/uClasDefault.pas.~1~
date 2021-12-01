@@ -1,0 +1,70 @@
+unit uClasDefault;
+
+interface
+
+uses
+  FireDAC.Comp.Client, dconexao, Vcl.Dialogs, System.SysUtils, Vcl.Controls,
+  Vcl.Forms;
+
+type
+  TClassDefault = class
+  private
+    FID: integer;
+
+    class var FObjetoBusca: TClassDefault;
+  public
+    destructor Destroy; override;
+    procedure Inicializar;
+    procedure Carrega;
+    procedure Incluir(pEfetuarCommit: boolean);
+    procedure Alterar(pEfetuarCommit: boolean);
+    procedure Excluir(pEfetuarCommit: boolean);
+
+    constructor Create;
+    class property ObjetoBusca: TClassDefault read FObjetoBusca write FObjetoBusca;
+
+    property ID: integer read FID write FID;
+
+  end;
+
+implementation
+
+{ TClassDefault }
+
+procedure TClassDefault.Alterar(pEfetuarCommit: boolean);
+begin
+
+end;
+
+procedure TClassDefault.Carrega;
+begin
+
+end;
+
+constructor TClassDefault.Create;
+begin
+
+end;
+
+destructor TClassDefault.Destroy;
+begin
+
+  inherited;
+end;
+
+procedure TClassDefault.Excluir(pEfetuarCommit: boolean);
+begin
+
+end;
+
+procedure TClassDefault.Incluir(pEfetuarCommit: boolean);
+begin
+
+end;
+
+procedure TClassDefault.Inicializar;
+begin
+
+end;
+
+end.

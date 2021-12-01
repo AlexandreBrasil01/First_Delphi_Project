@@ -1,0 +1,55 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 571
+  ClientWidth = 796
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 115
+  TextHeight = 16
+  object RLReport1: TRLReport
+    Left = 0
+    Top = 0
+    Width = 794
+    Height = 1123
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    object rlbCabecalho: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 67
+      BandType = btColumnHeader
+      object rllCabecalhoTxt: TRLLabel
+        Left = 288
+        Top = 24
+        Width = 80
+        Height = 18
+        Caption = 'Relatorio - '
+      end
+    end
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 105
+      Width = 718
+      Height = 304
+    end
+  end
+  object DataSource1: TDataSource
+    Left = 40
+    Top = 456
+  end
+  object FDQuery1: TFDQuery
+    Left = 40
+    Top = 512
+  end
+end

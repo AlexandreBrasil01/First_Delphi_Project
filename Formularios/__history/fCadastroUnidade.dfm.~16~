@@ -1,0 +1,84 @@
+inherited frmCadastroUnidade: TfrmCadastroUnidade
+  Caption = 'Cadastro de Unidades'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited Panel1: TPanel
+    ExplicitWidth = 1006
+  end
+  inherited Panel2: TPanel
+    ExplicitWidth = 1006
+    ExplicitHeight = 593
+    object lblID: TLabel
+      Left = 64
+      Top = 21
+      Width = 19
+      Height = 18
+      Caption = 'ID:'
+    end
+    object lblDescricao: TLabel
+      Left = 296
+      Top = 21
+      Width = 76
+      Height = 18
+      Caption = 'Descri'#231#227'o:'
+    end
+    object lblReferencia: TLabel
+      Left = 64
+      Top = 139
+      Width = 80
+      Height = 18
+      Caption = 'Refer'#234'ncia:'
+    end
+    object lblUnidade: TLabel
+      Left = 296
+      Top = 139
+      Width = 63
+      Height = 18
+      Caption = 'Unidade:'
+    end
+    object edtID: TEdit
+      Left = 64
+      Top = 48
+      Width = 57
+      Height = 26
+      TabStop = False
+      Color = clGradientActiveCaption
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object edtDescricao: TEdit
+      Left = 296
+      Top = 45
+      Width = 121
+      Height = 26
+      MaxLength = 35
+      TabOrder = 1
+    end
+    object edtReferencia: TEdit
+      Left = 64
+      Top = 163
+      Width = 121
+      Height = 26
+      MaxLength = 15
+      TabOrder = 2
+    end
+    object edtUnidade: TEdit
+      Left = 296
+      Top = 163
+      Width = 121
+      Height = 26
+      MaxLength = 3
+      TabOrder = 3
+    end
+  end
+  inherited Panel3: TPanel
+    ExplicitTop = 634
+    ExplicitWidth = 1006
+    inherited btnSair: TButton
+      OnClick = btnSairClick
+    end
+    inherited btnSalvar: TButton
+      OnClick = btnSalvarClick
+    end
+  end
+end

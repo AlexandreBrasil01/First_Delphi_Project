@@ -1,0 +1,5 @@
+inherited frrCadastroItem: TfrrCadastroItem
+  Caption = 'Cadastro de Itens'
+  PixelsPerInch = 115
+  TextHeight = 18
+end

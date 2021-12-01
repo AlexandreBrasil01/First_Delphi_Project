@@ -1,0 +1,26 @@
+unit ConsultaUsuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, fConsultaDefault, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmConsultaDefault1 = class(TfrmConsultaDefault)
+    cbxFiltro2: TComboBox;
+    Edit1: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsultaDefault1: TfrmConsultaDefault1;
+
+implementation
+
+{$R *.dfm}
+
+end.

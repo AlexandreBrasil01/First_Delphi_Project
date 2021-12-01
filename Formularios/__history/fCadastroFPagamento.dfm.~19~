@@ -1,0 +1,75 @@
+inherited frmCadastroFPagamento: TfrmCadastroFPagamento
+  Caption = 'Cadastra Forma de Pagamentos'
+  ClientHeight = 471
+  ClientWidth = 525
+  ExplicitWidth = 543
+  ExplicitHeight = 516
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited Panel1: TPanel
+    Width = 525
+    ExplicitWidth = 525
+  end
+  inherited Panel2: TPanel
+    Width = 525
+    Height = 390
+    ExplicitWidth = 525
+    ExplicitHeight = 390
+    object lblDescricao: TLabel
+      Left = 20
+      Top = 83
+      Width = 76
+      Height = 18
+      Caption = 'Descri'#231#227'o:'
+    end
+    object lblID: TLabel
+      Left = 20
+      Top = 14
+      Width = 19
+      Height = 18
+      Caption = 'ID:'
+    end
+    object edtID: TEdit
+      Left = 20
+      Top = 40
+      Width = 60
+      Height = 26
+      TabStop = False
+      Color = clGradientActiveCaption
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object edtDescricao: TEdit
+      Left = 20
+      Top = 107
+      Width = 121
+      Height = 26
+      CharCase = ecUpperCase
+      TabOrder = 1
+    end
+    object rdgTipo: TRadioGroup
+      Left = 20
+      Top = 163
+      Width = 120
+      Height = 90
+      ItemIndex = 0
+      Items.Strings = (
+        'A Vista'
+        'A Prazo')
+      TabOrder = 2
+    end
+  end
+  inherited Panel3: TPanel
+    Top = 431
+    Width = 525
+    ExplicitTop = 431
+    ExplicitWidth = 525
+    inherited btnSair: TButton
+      OnClick = btnSairClick
+      ExplicitLeft = 91
+    end
+    inherited btnSalvar: TButton
+      OnClick = btnSalvarClick
+    end
+  end
+end

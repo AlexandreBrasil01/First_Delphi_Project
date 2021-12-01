@@ -1,0 +1,82 @@
+unit fDefault;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.ExtCtrls, Vcl.StdCtrls, dConexao;
+
+type
+  TfmrCadastroProduto = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    edtNome: TEdit;
+    lblNome: TLabel;
+    btnSair: TButton;
+    procedure btnSalvarClick(Sender: TObject);
+
+  private
+    { Private declarations }
+    procedure IncluirProduto;
+    procedure AlterarProduto;
+
+  public
+    { Public declarations }
+    ID: String;
+    TipoRotina: String;
+
+  end;
+
+var
+  fmrCadastroProduto: TfmrCadastroProduto;
+
+implementation
+
+{$R *.dfm}
+{ TfrmCadastroProduto }
+
+{ TfmrCadastroProduto }
+
+procedure TfmrCadastroProduto.AlterarProduto;
+begin
+  dtmconexao.qryCadastroClientes.close;
+  dtmconexao.qryCadastroClientes.sql.Clear;
+  dtmconexao.qryCadastroClientes.sql.add
+    (' UPDATE CLIENTE SET NOME = :NOME, VALOR = :VALOR ');
+  dtmconexao.qryCadastroClientes.sql.add(' WHERE ID = :ID          ');
+  dtmconexao.qryCadastroClientes.ParamByName('NOME').asstring := edtNome.Text;
+  dtmconexao.qryCadastroClientes.ParamByName('VALOR').asstring := edtValor.Text;
+  dtmconexao.qryCadastroClientes.ParamByName('ID').asstring := ID;
+  dtmconexao.qryCadastroClientes.ExecSQL;
+  dtmconexao.FDConnection.Commit;
+end;
+
+procedure TfmrCadastroProduto.btnSalvarClick(Sender: TObject);
+begin
+  if TipoRotina = 'Incluir' then
+  begin
+    IncluirProduto;
+  end
+  else if TipoRotina = 'Alterar' then
+  begin
+    AlterarProduto;
+  end;
+
+  close;
+end;
+
+procedure TfmrCadastroProduto.IncluirProduto;
+begin
+  dtmconexao.qryCadastroClientes.close;
+  dtmconexao.qryCadastroClientes.sql.Clear;
+  dtmconexao.qryCadastroClientes.sql.add
+    (' INSERT INTO CLIENTE (NOME, CPF, EMAIL) VALUES (:NOME, :CPF, :EMAIL);    ');
+  dtmconexao.qryCadastroClientes.ParamByName('NOME').asstring := edtNome.Text;
+  dtmconexao.qryCadastroClientes.ParamByName('VALOR').asstring := edtValor.Text;
+  dtmconexao.qryCadastroClientes.ExecSQL;
+  dtmconexao.FDConnection.Commit;
+end;
+
+end.

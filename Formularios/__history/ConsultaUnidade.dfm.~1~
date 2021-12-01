@@ -1,0 +1,5 @@
+inherited frmConsultaDefault2: TfrmConsultaDefault2
+  Caption = 'frmConsultaDefault2'
+  PixelsPerInch = 115
+  TextHeight = 16
+end

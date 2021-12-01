@@ -1,0 +1,54 @@
+object frmFiltroDefault: TfrmFiltroDefault
+  Left = 0
+  Top = 0
+  Caption = 'frmFiltroDefault'
+  ClientHeight = 468
+  ClientWidth = 692
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 115
+  TextHeight = 18
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 692
+    Height = 40
+    Align = alTop
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 40
+    Width = 692
+    Height = 388
+    Align = alClient
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 428
+    Width = 692
+    Height = 40
+    Align = alBottom
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 2
+    object btnVisualizar: TButton
+      Left = 1
+      Top = 1
+      Width = 81
+      Height = 38
+      Align = alLeft
+      Caption = 'Visualizar'
+      TabOrder = 0
+    end
+  end
+end

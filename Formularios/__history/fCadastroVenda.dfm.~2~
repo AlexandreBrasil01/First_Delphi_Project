@@ -1,0 +1,5 @@
+inherited fmrCadastroDefault1: TfmrCadastroDefault1
+  Caption = 'fmrCadastroVenda'
+  PixelsPerInch = 115
+  TextHeight = 18
+end

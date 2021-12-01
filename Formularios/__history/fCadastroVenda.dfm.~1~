@@ -1,0 +1,19 @@
+inherited fmrCadastroDefault1: TfmrCadastroDefault1
+  Caption = 'fmrCadastroDefault1'
+  PixelsPerInch = 115
+  TextHeight = 18
+  inherited Panel1: TPanel
+    Color = clMaroon
+    ParentBackground = False
+  end
+  inherited Panel2: TPanel
+    ExplicitHeight = 467
+  end
+  inherited Panel3: TPanel
+    Color = clMaroon
+    ParentBackground = False
+    inherited btnSair: TButton
+      ExplicitLeft = 91
+    end
+  end
+end
